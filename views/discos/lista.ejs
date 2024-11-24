@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catálogo de Discos</title>
+</head>
+<body>
+    <h1>Discos Disponíveis</h1>
+    <ul>
+        <% discos.forEach(disco => { %>
+            <li>
+                <strong><%= disco.titulo %></strong> - <%= disco.anoLancamento %> <br>
+                Artistas: <%= disco.Artistas.map(a => a.nome).join(', ') %> <br>
+                Gêneros: <%= disco.Generos.map(g => g.nome).join(', ') %> <br>
+                Faixas: <%= disco.Faixas.map(f => f.titulo).join(', ') %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
